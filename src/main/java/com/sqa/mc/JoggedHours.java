@@ -61,10 +61,22 @@ public class JoggedHours {
 		int numOfDays = AppBasics.requestInt("How many days did " + joggerName + " jog in the last week?", 1, 7);
 		double hoursPerDay = 0;
 		for (int i = 0; i < numOfDays; i++) {
-			hoursPerDay =
-					hoursPerDay + AppBasics.requestInt("How many hours did " + joggerName + " jog on day " + (i + 1));
+			hoursPerDay += AppBasics.requestInt("How many hours did " + joggerName + " jog on day " + (i + 1));
 		}
-		double totalHours = hoursPerDay;
+		double totalHours = hoursPerDay;   // how do i separate each day's hours
+										   // when entered by user
 		System.out.println("Total hours jogged: " + totalHours);
+		double avgHours = hoursPerDay % numOfDays;
+		System.out.println("Average hours jogged per day: " + avgHours);
+		if (avgHours > 40) {
+			System.out.println("Jogging level: Extremist");
+		} else if (avgHours > 14) {
+			System.out.println("Jogging level: Efficient");
+		} else if (avgHours > 0) {
+			System.out.println("Jogging level: Amateur");
+		}
+		System.out.println("Would you like to log another jogger? ");
+		String ans = input.next();
+		ans = ans.equalsIgnoreCase(yes, no, y, n); // cannot get this to work.
 	}
 }
