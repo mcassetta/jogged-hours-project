@@ -53,6 +53,26 @@ public class AppBasics {
 		return scanner.nextLine();
 	}
 
+	public static boolean requestBoolean(String question) {
+		return false;
+	}
+
+	public static byte requestByte(String question) {
+		return 0;
+	}
+
+	public static char requestChar(String question) {
+		return 0;
+	}
+
+	public static double requestDouble(String question) {
+		return 0;
+	}
+
+	public static float requestFloat(String question) {
+		return 0;
+	}
+
 	/**
 	 * @param string
 	 * @return
@@ -119,5 +139,21 @@ public class AppBasics {
 			}
 		}
 		return resultNum;
+	}
+
+	public static int requestInt(String question, int min, int max, String errorMessage) {
+		return 0;
+	}
+
+	public static long requestLong(String question) {
+		return 0;
+	}
+
+	public static short requestShort(String question) {
+		return 0;
+	}
+
+	public static String requestString(String question) {
+		return question;
 	}
 }
